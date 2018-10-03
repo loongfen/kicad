@@ -559,6 +559,11 @@ protected:
      */
     TEXTE_MODULE* CreateTextModule( MODULE* aModule, wxDC* aDC );
 
+    /**
+     * Return the hotkey prefs for module editing
+     */
+    HOTKEY_PREFS_CONFIG getHotkeyPrefsConfigs() override;
+
 private:
 
     /**

@@ -459,7 +459,7 @@ bool SCH_EDIT_FRAME::OnHotKey( wxDC* aDC, int aHotKey, const wxPoint& aPosition,
         return false;
 
     case HK_HELP:       // Display Current hotkey list
-        DisplayHotkeyList( this, g_Schematic_Hokeys_Descr );
+        DisplayHotkeyList();
         break;
 
     case HK_RESET_LOCAL_COORD:         // Reset the relative coord
@@ -706,7 +706,7 @@ bool LIB_EDIT_FRAME::OnHotKey( wxDC* aDC, int aHotKey, const wxPoint& aPosition,
         return false;
 
     case HK_HELP:       // Display Current hotkey list
-        DisplayHotkeyList( this, g_Libedit_Hokeys_Descr );
+        DisplayHotkeyList();
         break;
 
     case HK_RESET_LOCAL_COORD:         // Reset the relative coord
@@ -916,7 +916,7 @@ bool LIB_VIEW_FRAME::OnHotKey( wxDC* aDC, int aHotKey, const wxPoint& aPosition,
         return false;
 
     case HK_HELP:                   // Display Current hotkey list
-        DisplayHotkeyList( this, g_Viewlib_Hokeys_Descr );
+        DisplayHotkeyList();
         break;
 
     case HK_RESET_LOCAL_COORD:      // set local (relative) coordinate origin
