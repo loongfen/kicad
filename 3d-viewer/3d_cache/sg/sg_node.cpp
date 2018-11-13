@@ -358,21 +358,21 @@ bool S3D::GetMatIndex( MATLIST& aList, SGNODE* aNode, int& aIndex )
 
 void S3D::INIT_SMATERIAL( SMATERIAL& aMaterial )
 {
-    memset( &aMaterial, 0, sizeof( aMaterial ) );
+    aMaterial = {};
     return;
 }
 
 
 void S3D::INIT_SMESH( SMESH& aMesh )
 {
-    memset( &aMesh, 0, sizeof( aMesh ) );
+    aMesh = {};
     return;
 }
 
 
 void S3D::INIT_S3DMODEL( S3DMODEL& aModel )
 {
-    memset( &aModel, 0, sizeof( aModel ) );
+    aModel = {};
     return;
 }
 
