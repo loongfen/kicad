@@ -44,6 +44,9 @@ static std::unique_ptr<ZOOM_CONTROLLER> GetZoomControllerForPlatform()
     // smaller rotation values.  For those devices, let's handle zoom
     // based on the rotation amount rather than the time difference.
     return std::make_unique<CONSTANT_ZOOM_CONTROLLER>( 0.01 );
+#elif __WXGTK3__
+    // GTK3 is similar, but the scale constant is smaller
+    return std::make_unique<CONSTANT_ZOOM_CONTROLLER>( 0.001 );
 #else
     return std::make_unique<ACCELERATING_ZOOM_CONTROLLER>( 500 );
 #endif
